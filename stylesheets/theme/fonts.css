@@ -1,0 +1,52 @@
+/* docs/stylesheets/theme/fonts.css */
+
+/* 中文字体变量 */
+:root {
+  --md-font-chinese: "LXGW WenKai", "PingFang SC", "Microsoft YaHei";
+}
+
+/* 引入 LXGW WenKai 字体 */
+@font-face {
+  font-family: "LXGW WenKai";
+  src: url("https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css");
+  font-display: swap;
+}
+
+body {
+  font-family: var(--md-font-chinese), -apple-system, sans-serif;
+}
+
+/* 代码字体配置 */
+:root {
+  --md-code-font: "JetBrains Mono", "Fira Code", "Source Code Pro", monospace;
+}
+
+/* 代码块样式 */
+.md-typeset code,
+.md-typeset pre {
+  font-family: var(--md-code-font);
+  font-size: 0.9em;
+}
+
+/* 行内代码 */
+.md-typeset code {
+  border-radius: 4px;
+  padding: .2em .4em;
+}
+
+/* 字体回退策略 */
+:root {
+  --md-text-font-fallback: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
+    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+
+  --md-code-font-fallback: SFMono-Regular, Consolas, Menlo, monospace;
+}
+
+/* 应用回退字体 */
+body {
+  font-family: var(--md-font-chinese), var(--md-text-font-fallback);
+}
+
+pre, code {
+  font-family: var(--md-code-font), var(--md-code-font-fallback);
+}
