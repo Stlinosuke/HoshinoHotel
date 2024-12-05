@@ -8,6 +8,7 @@ site_description: 旅行者休憩之处「星野旅店」
 ## [top]
 theme:
   name: material
+  font: false
   custom_dir: docs/mkdocs/overrides
   palette: 
     - scheme: default # 默认日间模式
@@ -47,6 +48,9 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/Stlinosuke
       name: GitHub | Stlinosuke # 鼠标悬浮提示
+  css_variables:
+    spacing_unit: 8px
+    content_width: 960px
   
 
 # [Navigtion] 导航栏
@@ -55,7 +59,13 @@ nav:
 #  - 快速构建: 
 #    - quick_start.md
   - 星野の记事簿: 
-    - 1 摸鱼记录[2024.12.1] moyu20241201.md
+    - 回忆殿堂: hoshino-entry/index.md
+    - 记忆之页:
+      - 摸鱼记录[2024.12.1]: hoshino-entry/moyu20241201.md
+  - 竹喵の摄影画廊:
+    - 相册: index.md
+    - 相片:
+      - 摄影记录
 
 
 
@@ -96,6 +106,7 @@ markdown_extensions:
   - pymdownx.caret # markdown上标显示
   - pymdownx.tilde # markdown下标显示
   - pymdownx.mark # markdown突出显示
+  - align-center
 
 extra_javascript:
   # latex支持
@@ -105,3 +116,5 @@ extra_javascript:
 extra_css:
   - mkdocs/css/unordered-list-symbols.css # 多个无序列表符号
   - mkdocs/css/img-center.css # 图像居中
+  - stylesheets/extra.css #主样式
+  - stylesheets/theme/fonts.css
