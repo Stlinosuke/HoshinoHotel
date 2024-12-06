@@ -1,7 +1,8 @@
 # !/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-from distutils.core import setup
+# from distutils.core import setup
+from setuptools import setup, find_packages
 
 setup(
     # 指定项目名称，我们在后期打包时，这就是打包的包名称，当然打包时的名称可能还会包含下面的版本号哟~
@@ -20,6 +21,6 @@ setup(
     # 综上所述，我们如果想要把一个包的所有"*.py"文件进行打包，应该在packages列表写下所有包的层级关系哟~这样就开源将指定包路径的所有".py"文件进行打包!
     #比如对于包devops，其包含2个子文件夹dev和ops，里面分别有需要打包的.py，那么就这么写
     #packages=['devops', "devops.dev", "devops.ops"],
-    packages=["mdcustom.textalign"],
+    packages= find_packahes(exclude=['test']),
     license='MIT',
     zip_safe=False)
