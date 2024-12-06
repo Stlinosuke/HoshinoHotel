@@ -21,6 +21,6 @@ setup(
     # 综上所述，我们如果想要把一个包的所有"*.py"文件进行打包，应该在packages列表写下所有包的层级关系哟~这样就开源将指定包路径的所有".py"文件进行打包!
     #比如对于包devops，其包含2个子文件夹dev和ops，里面分别有需要打包的.py，那么就这么写
     #packages=['devops', "devops.dev", "devops.ops"],
-    packages= find_packahes(exclude=['test']),
+    packages= find_packages(exclude=['test']),
     license='MIT',
     zip_safe=False)
