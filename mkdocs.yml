@@ -4,6 +4,7 @@ site_url: https://Stlinosuke..github.io/
 site_author: Stlinosuke
 site_description: 旅行者休憩之处「星野旅店」 
 
+
 # [UI] 界面设置
 ## [top]
 theme:
@@ -53,19 +54,6 @@ extra:
     content_width: 960px
   
 
-# [Navigtion] 导航栏
-nav:
-  - 大厅: index.md
-#  - 快速构建: 
-#    - quick_start.md
-  - 星野の记事簿: 
-    - 回忆殿堂: hoshino-entry/index.md
-    - 记忆之页:
-      - 摸鱼记录[2024.12.1]: hoshino-entry/moyu20241201.md
-  - 竹喵の摄影画廊:
-    - 相册: index.md
-    - 相片:
-      - 摄影记录
 
 
 
@@ -106,7 +94,7 @@ markdown_extensions:
   - pymdownx.caret # markdown上标显示
   - pymdownx.tilde # markdown下标显示
   - pymdownx.mark # markdown突出显示
-  - align-center
+  - src.mdcustom.textalign #自定义排版语法
 
 extra_javascript:
   # latex支持
@@ -118,3 +106,18 @@ extra_css:
   - mkdocs/css/img-center.css # 图像居中
   - stylesheets/extra.css #主样式
   - stylesheets/theme/fonts.css
+  
+  
+# [Navigtion] 导航栏
+nav:
+  - 大厅: index.md
+#  - 快速构建: 
+#    - quick_start.md
+  - 星野の记事簿: 
+    - 回忆殿堂: hoshino-entry/index.md
+    - 记忆之页:
+      - 摸鱼记录[2024.12.1]: hoshino-entry/moyu20241201.md
+  - 竹喵の摄影画廊:
+    - 相册: index.md
+    - 相片:
+      - 摄影记录

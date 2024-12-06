@@ -21,7 +21,7 @@
 
 - *最后更新：December 1st, 2024*
 
--*本页面使用了[mkdocs-material(https://squidfunk.github.io/mkdocs-material/）样式：*
+-*本页面使用了[mkdocs-material](https://squidfunk.github.io/mkdocs-material/）样式*
 
 
 
