@@ -8,7 +8,7 @@
 
 （鞠躬）
 
-在这里你能看到「星野」这个聚落成为的点点滴滴，也可以在繁忙之中找到些许消遣~ 
+在这里你能看到「星野」这个聚落成为的~胡闹~点点滴滴，也可以在繁忙之中找到些许消遣~ 
 
 闲下来时点一杯咖啡也是不错的哟~
 
@@ -21,7 +21,7 @@
 
 - *最后更新：December 1st, 2024*
 
--*本页面使用了[mkdocs-material](https://squidfunk.github.io/mkdocs-material/）样式*
+-*本页面使用了Material样式，详情请查阅[🔗mkdocs-material](<https://squidfunk.github.io/mkdocs-material>)*
 
 
 

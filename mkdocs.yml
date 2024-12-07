@@ -94,7 +94,9 @@ markdown_extensions:
   - pymdownx.caret # markdown上标显示
   - pymdownx.tilde # markdown下标显示
   - pymdownx.mark # markdown突出显示
-  - mdcustom.textalign #自定义排版语法
+  - MarkdownEx.textalign
+  # - MarkdownEx.markdown_del_ins
+  # - mdcustom.CenterExtension #自定义排版语法
 
 extra_javascript:
   # latex支持
