@@ -1,0 +1,8 @@
+markdown_del_ins.py
+setup.py
+textalign.py
+mdcustom.egg-info/PKG-INFO
+mdcustom.egg-info/SOURCES.txt
+mdcustom.egg-info/dependency_links.txt
+mdcustom.egg-info/not-zip-safe
+mdcustom.egg-info/top_level.txt

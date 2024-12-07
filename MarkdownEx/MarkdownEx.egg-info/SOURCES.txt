@@ -1,0 +1,8 @@
+setup.py
+MarkdownEx/__init__.py
+MarkdownEx/textalign.py
+MarkdownEx.egg-info/PKG-INFO
+MarkdownEx.egg-info/SOURCES.txt
+MarkdownEx.egg-info/dependency_links.txt
+MarkdownEx.egg-info/not-zip-safe
+MarkdownEx.egg-info/top_level.txt
