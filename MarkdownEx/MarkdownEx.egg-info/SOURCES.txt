@@ -1,6 +1,9 @@
 setup.py
 MarkdownEx/__init__.py
-MarkdownEx/textalign.py
+MarkdownEx/centeralign.py
+MarkdownEx/leftalign.py
+MarkdownEx/rightalign.py
+MarkdownEx/textcolor.py
 MarkdownEx.egg-info/PKG-INFO
 MarkdownEx.egg-info/SOURCES.txt
 MarkdownEx.egg-info/dependency_links.txt
