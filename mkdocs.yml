@@ -11,6 +11,7 @@ theme:
   name: material
   font: false
   custom_dir: docs/mkdocs/overrides
+  favicon: assets/logo.jpg
   palette: 
     - scheme: default # 默认日间模式
       primary: indigo # 上方的
@@ -36,11 +37,14 @@ theme:
     - search.share # 将搜索结果分享
   language: zh # 一些提示性的文字会变成中文
   icon:
-    repo: fontawesome/brands/github-alt
+    logo: bootstrap/envelope-paper-heart
+    repo: bootstrap/github
+    
+    
 edit_uri: edit/main/docs # 编辑按钮跳转的链接
 ## [top-right corner]
 repo_url: https://github.com/Stlinosuke/Stlinosuke.github.io # 右上角点击跳转的链接
-repo_name: Stlinosuke/Stlinosuke.github.io # 右上角的名字
+repo_name: HoshinoHotel # 右上角的名字
 ## [bottom-left corner]
 copyright: Copyright &copy; 2024 Stlinosuke # 左下角的版权声明
 ## [bottom-right corner]
@@ -93,11 +97,21 @@ markdown_extensions:
   - pymdownx.details # admonition需要
   - pymdownx.caret # markdown上标显示
   - pymdownx.tilde # markdown下标显示
-  - pymdownx.mark # markdown突出显示
+  #- pymdownx.mark # markdown突出显示
+  #- pymdownx.critic
+  - pymdownx.keys
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - docs/mkdocs/overrides/.icons
   - MarkdownEx.centeralign
   - MarkdownEx.leftalign
   - MarkdownEx.rightalign
   - MarkdownEx.textcolor
+  - MarkdownEx.marktext
+  - MarkdownEx.delins
   # - MarkdownEx.markdown_del_ins
   # - mdcustom.CenterExtension #自定义排版语法
 
@@ -111,6 +125,7 @@ extra_css:
   - mkdocs/css/img-center.css # 图像居中
   - stylesheets/extra.css #主样式
   - stylesheets/theme/fonts.css
+  #- https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
   
   
 # [Navigtion] 导航栏
