@@ -1,2 +1,2 @@
 """MkDocs Material Extensions."""
-__all__=["markdown-del-ins","textalign"]
+__all__=["textcolor","centeralign","leftalign","rightalign"]

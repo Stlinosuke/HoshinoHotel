@@ -94,7 +94,10 @@ markdown_extensions:
   - pymdownx.caret # markdown上标显示
   - pymdownx.tilde # markdown下标显示
   - pymdownx.mark # markdown突出显示
-  - MarkdownEx.textalign
+  - MarkdownEx.centeralign
+  - MarkdownEx.leftalign
+  - MarkdownEx.rightalign
+  - MarkdownEx.textcolor
   # - MarkdownEx.markdown_del_ins
   # - mdcustom.CenterExtension #自定义排版语法
 

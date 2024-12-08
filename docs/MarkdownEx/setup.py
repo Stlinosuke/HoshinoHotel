@@ -22,6 +22,6 @@ setup(
     # 比如对于包devops，其包含2个子文件夹dev和ops，里面分别有需要打包的.py，那么就这么写
     # packages=['devops', "devops.dev", "devops.ops"],
     # packages= find_packages(exclude=['test']),
-    py_modules=['MarkdownEx.textalign'],
+    py_modules=['MarkdownEx.textcolor','MarkdownEx.centeralign','MarkdownEx.leftalign','MarkdownEx.rightalign'],
     license='MIT',
     zip_safe=False)
