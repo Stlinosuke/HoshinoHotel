@@ -1,6 +1,6 @@
 # [Info] 基本信息
 site_name: 竹喵Stlinosukeの小窝 # 左上角标题
-site_url: https://Stlinosuke..github.io/
+site_url: https://Stlinosuke..github.io/HoshinoHotel
 site_author: Stlinosuke
 site_description: 旅行者休憩之处「星野旅店」 
 
@@ -9,9 +9,13 @@ site_description: 旅行者休憩之处「星野旅店」
 ## [top]
 theme:
   name: material
-  font: false
+  language: zh # 一些提示性的文字会变成中文
   custom_dir: docs/mkdocs/overrides
-  favicon: assets/logo.jpg
+  icon:
+    logo: bootstrap/envelope-paper-heart
+    repo: bootstrap/github
+  favicon: assets/fluent_star-emphasis-32-filled.png
+  font: false
   palette: 
     - scheme: default # 默认日间模式
       primary: indigo # 上方的
@@ -26,79 +30,79 @@ theme:
         icon: material/weather-sunny
         name: 切换至日间模式
   features:
-    - content.code.copy # 代码复制
-    - navigation.tabs # 使用Tab来进行分类
-    - navigation.top # 返回顶部的按钮 在上滑时出现
-    - navigation.footer # 上一个下一个按钮
-    - navigation.indexes # Tab会有一个index.md 而不是在打开Tab时打开第一篇文章
-    - navigation.expand # 打开Tab时左侧目录全部展开
-    - search.suggest # 搜索输入一些字母时推荐补全整个单词
+    - content.code.copy             # 代码复制
+    - navigation.instant            # 即时加载
+    - navigation.instant.prefetch   # 即时预取
+    - navigation.instant.progress   # 进度指示器
+    - navigation.instant.preview    # 全局启用即时预览
+    - navigation.tracking           # 锚跟踪（类似点击后）
+    - navigation.tabs               # 使用Tab来进行分类
+    - navigation.tabs.sticky        # 粘性导航选项卡（保持可见）
+    - navigation.tabs.sections      # 分段
+    - navigation.top                # 返回顶部的按钮 在上滑时出现
+    - navigation.footer             # 上一个下一个按钮
+    - navigation.indexes            # Tab会有一个index.md 而不是在打开Tab时打开第一篇文章
+    - navigation.expand             # 打开Tab时左侧目录全部展开
+    - search.suggest                # 搜索输入一些字母时推荐补全整个单词
     - search.highlight # 搜索出的文章关键词加入高亮
     - search.share # 将搜索结果分享
-  language: zh # 一些提示性的文字会变成中文
-  icon:
-    logo: bootstrap/envelope-paper-heart
-    repo: bootstrap/github
+  
+  
     
     
 edit_uri: edit/main/docs # 编辑按钮跳转的链接
 ## [top-right corner]
-repo_url: https://github.com/Stlinosuke/Stlinosuke.github.io # 右上角点击跳转的链接
+repo_url: https://github.com/Stlinosuke/HoshinoHotel # 右上角点击跳转的链接
 repo_name: HoshinoHotel # 右上角的名字
 ## [bottom-left corner]
 copyright: Copyright &copy; 2024 Stlinosuke # 左下角的版权声明
 ## [bottom-right corner]
-extra:
-  social: # icons
-    - icon: fontawesome/brands/github
-      link: https://github.com/Stlinosuke
-      name: GitHub | Stlinosuke # 鼠标悬浮提示
-  css_variables:
-    spacing_unit: 8px
-    content_width: 960px
-  
-
-
 
 
 # [Extensions] 扩展
 plugins:
-  - search:
-    # insider已经支持中文的分词搜索了 https://squidfunk.github.io/mkdocs-material/blog/2022/chinese-search-support/
+  - search:                       # insider已经支持中文的分词搜索了 https://squidfunk.github.io/mkdocs-material/blog/2022/chinese-search-support/
       lang:
         - en
         - ja
-      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
-  - tags # 给单篇文章添加标签 https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/?h=tags
-  - git-revision-date-localized: # 日期显示
+      separator: '[\s\u200b\-]|[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  - tags                          # 给单篇文章添加标签 https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/?h=tags
+  - git-revision-date-localized:  # 日期显示
       # ["date","datetime","iso_date","iso_datetime","timeago","custom"]
       type: timeago
-      enable_creation_date: true # 创建时间
+      enable_creation_date: true  # 创建时间
       timezone: Asia/Shanghai
-  - git-authors # 显示作者
-  - glightbox # 图像缩放
-  - meta-manager # 元数据管理
+  - git-authors                   # 显示作者
+  - glightbox                     # 图像缩放
+  - meta-manager                  # 元数据管理
 
 markdown_extensions:
-  - pymdownx.arithmatex: # latex支持
-      generic: true
-  - attr_list # 给图片后面添加{width="300"}设置大小
+  - admonition                    # 信息块 (https://squidfunk.github.io/mkdocs-material/reference/admonitions/#inline-blocks)
+  - attr_list                     # 给图片后面添加{width="300"}设置大小
   - md_in_html
   - tables
   - toc:
-      permalink: true # 固定标题位置为当前位置
-  - pymdownx.highlight: # 代码块高亮
-      linenums: false # 显示行号
+      title: -- 大纲导航 --
+      permalink: true             # 固定标题位置为当前位置
+      permalink_title: 悬停加载
+      toc_depth: 6
+
+  - pymdownx.arithmatex:          # latex支持
+      generic: true    
+  - pymdownx.highlight:           # 代码块高亮
+      linenums: false             # 显示行号
       linenums_style: table
-      # auto_title: true # 显示编程语言名称
-  - pymdownx.superfences # 代码块高亮插件
-  - pymdownx.inlinehilite # 段落中内置的小代码高亮
-  - admonition # https://squidfunk.github.io/mkdocs-material/reference/admonitions/#inline-blocks
-  - pymdownx.details # admonition需要
-  - pymdownx.caret # markdown上标显示
-  - pymdownx.tilde # markdown下标显示
-  #- pymdownx.mark # markdown突出显示
-  #- pymdownx.critic
+      # auto_title: true          # 显示编程语言名称
+  - pymdownx.superfences          # 代码块高亮插件
+  - pymdownx.inlinehilite         # 段落中内置的小代码高亮
+  - pymdownx.details              # admonition需要
+  - pymdownx.tasklist:            # 任务列表
+      custom_checkbox: true
+  - pymdownx.highlight            # 语法高亮
+  - pymdownx.inlinehilite         # 内联语法高亮
+  - pymdownx.caret                # markdown上标显示 (x^a)
+  - pymdownx.tilde                # markdown下标显示 (H2O)
+  - pymdownx.superfences          # 代码块
   - pymdownx.keys
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
@@ -106,14 +110,40 @@ markdown_extensions:
       options:
         custom_icons:
           - docs/mkdocs/overrides/.icons
+
   - MarkdownEx.centeralign
   - MarkdownEx.leftalign
   - MarkdownEx.rightalign
   - MarkdownEx.textcolor
   - MarkdownEx.marktext
   - MarkdownEx.delins
-  # - MarkdownEx.markdown_del_ins
-  # - mdcustom.CenterExtension #自定义排版语法
+  
+
+extra:
+  site_url: https://stlinosuke.github.io/HoshinoHotel/
+  homepage: /
+  social: # 社交媒体
+    #Github
+    - icon: fontawesome/brands/github
+      link: https://github.com/Stlinosuke
+      name: GitHub | Stlinosuke # 鼠标悬浮提示
+    #Bilibili
+    - icon: Ant-design/filled/bilibili
+      link: https://space.bilibili.com/197371346
+      name: Bilibili | Stlinosuke
+    #Osu
+    - icon: custom/osu
+      link: https://osu.ppy.sh/users/36105637
+      name: Osu | Stlinosuke      
+    #Ria
+    - icon: bootstrap/house
+      link: https://wiki.ria.red/wiki/Stlinosuke
+      name: Ria Wiki | Stlinosuke
+
+  css_variables:
+    spacing_unit: 8px
+    content_width: 960px
+  
 
 extra_javascript:
   # latex支持
@@ -121,23 +151,20 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 extra_css:
-  - mkdocs/css/unordered-list-symbols.css # 多个无序列表符号
-  - mkdocs/css/img-center.css # 图像居中
-  - stylesheets/extra.css #主样式
+  - mkdocs/css/unordered-list-symbols.css     # 多个无序列表符号
+  - mkdocs/css/img-center.css                 # 图像居中
+  - stylesheets/extra.css                     # extra样式
   - stylesheets/theme/fonts.css
   #- https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
   
   
 # [Navigtion] 导航栏
 nav:
-  - 大厅: index.md
-#  - 快速构建: 
-#    - quick_start.md
+  - 大厅: 
+    - index.md
   - 星野の记事簿: 
     - 回忆殿堂: hoshino-entry/index.md
     - 记忆之页:
-      - 摸鱼记录[2024.12.1]: hoshino-entry/moyu20241201.md
+      - 2024年12月: hoshino-entry/2024December.md
   - 竹喵の摄影画廊:
     - 相册: index.md
-    - 相片:
-      - 摄影记录
