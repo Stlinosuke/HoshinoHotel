@@ -52,8 +52,8 @@ theme:
     
 edit_uri: edit/main/docs # 编辑按钮跳转的链接
 ## [top-right corner]
-repo_url: https://github.com/Stlinosuke/HoshinoHotel # 右上角点击跳转的链接
-repo_name: HoshinoHotel # 右上角的名字
+#repo_url: https://github.com/Stlinosuke/HoshinoHotel # 右上角点击跳转的链接
+#repo_name: HoshinoHotel # 右上角的名字
 ## [bottom-left corner]
 copyright: Copyright &copy; 2024 Stlinosuke # 左下角的版权声明
 ## [bottom-right corner]
@@ -61,26 +61,29 @@ copyright: Copyright &copy; 2024 Stlinosuke # 左下角的版权声明
 
 # [Extensions] 扩展
 plugins:
+  - awesome-pages
+  - tags                          # 给单篇文章添加标签 https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/?h=tags
+  - git-authors                   # 显示作者
+  - glightbox                     # 图像缩放
+  - meta-manager                  # 元数据管理
   - search:                       # insider已经支持中文的分词搜索了 https://squidfunk.github.io/mkdocs-material/blog/2022/chinese-search-support/
       lang:
         - en
         - ja
       separator: '[\s\u200b\-]|[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
-  - tags                          # 给单篇文章添加标签 https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/?h=tags
   - git-revision-date-localized:  # 日期显示
       # ["date","datetime","iso_date","iso_datetime","timeago","custom"]
       type: timeago
       enable_creation_date: true  # 创建时间
       timezone: Asia/Shanghai
-  - git-authors                   # 显示作者
-  - glightbox                     # 图像缩放
-  - meta-manager                  # 元数据管理
+
 
 markdown_extensions:
   - admonition                    # 信息块 (https://squidfunk.github.io/mkdocs-material/reference/admonitions/#inline-blocks)
   - attr_list                     # 给图片后面添加{width="300"}设置大小
   - md_in_html
   - tables
+  - def_list
   - toc:
       title: -- 大纲导航 --
       permalink: true             # 固定标题位置为当前位置
@@ -104,6 +107,8 @@ markdown_extensions:
   - pymdownx.tilde                # markdown下标显示 (H2O)
   - pymdownx.superfences          # 代码块
   - pymdownx.keys
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -157,7 +162,7 @@ extra_css:
   - stylesheets/theme/fonts.css
   #- https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
   
-  
+
 # [Navigtion] 导航栏
 nav:
   - 大厅: 
@@ -167,4 +172,6 @@ nav:
     - 记忆之页:
       - 2024年12月: hoshino-entry/2024December.md
   - 竹喵の摄影画廊:
-    - 相册: index.md
+    - 相片集: photos/index.md
+    - 褪色相片: 
+      - 2024年12月: photos/2024December.md
