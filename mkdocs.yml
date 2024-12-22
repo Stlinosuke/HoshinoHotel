@@ -17,18 +17,31 @@ theme:
   favicon: assets/fluent_star-emphasis-32-filled.png
   font: false
   palette: 
-    - scheme: default # 默认日间模式
-      primary: indigo # 上方的
-      accent: orange # 链接等可交互元件的高亮色
+#    - scheme: default # 默认日间模式
+#      primary: indigo # 上方的
+#      accent: orange # 链接等可交互元件的高亮色
+#      toggle:
+#        icon: material/weather-night # 图标
+#        name: 切换至夜间模式 # 鼠标悬浮提示
+    - media: "(prefers-color-scheme: light)"
+      scheme: sunset glow
       toggle:
-        icon: material/weather-night # 图标
-        name: 切换至夜间模式 # 鼠标悬浮提示
+        icon: material/weather-night # 图标(可改，下同)
+        name: 切换至夜间模式
+
     - scheme: slate # 夜间模式
       primary: indigo
       accent: orange
       toggle:
         icon: material/weather-sunny
         name: 切换至日间模式
+
+#      - media: "(prefers-color-scheme: dark)"
+#        scheme: sunset glow dark
+#        toggle:
+#          icon: material/weather-sunny
+#          name: Switch to light mode
+
   features:
     - content.code.copy             # 代码复制
     - navigation.instant            # 即时加载
@@ -50,7 +63,7 @@ theme:
   
     
     
-edit_uri: edit/main/docs # 编辑按钮跳转的链接
+# edit_uri: edit/main/docs # 编辑按钮跳转的链接
 ## [top-right corner]
 #repo_url: https://github.com/Stlinosuke/HoshinoHotel # 右上角点击跳转的链接
 #repo_name: HoshinoHotel # 右上角的名字
@@ -122,6 +135,7 @@ markdown_extensions:
   - MarkdownEx.textcolor
   - MarkdownEx.marktext
   - MarkdownEx.delins
+
   
 
 extra:
@@ -160,6 +174,7 @@ extra_css:
   - mkdocs/css/img-center.css                 # 图像居中
   - stylesheets/extra.css                     # extra样式
   - stylesheets/theme/fonts.css
+  - stylesheets/my-scheme.css
   #- https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
   
 

@@ -7,13 +7,15 @@
 
 |- 欢迎来到竹喵的小窝—**星野旅店！**-|
 
+|-[![Preview Final.png](https://s11.ax1x.com/2023/12/17/pi5y1cd.png)](https://imgse.com/i/pi5y1cd)-|
+
 ---------
 
 ## **简介**
 
-本店的店长是**%(#50FACD)[++竹喵Stlinosuke++]**
+本店的店长是**%(#26c298)[++竹喵Stlinosuke++]**
 
-是Minecraft生存社群服务器**%(#DC143C)[RIA:Zth]**第216号居[**%(#FFD700)[「:bootstrap-link-45deg:星野」]**](https://wiki.ria.red/wiki/%E6%98%9F%E9%87%8E)的主要建设者之一！
+是Minecraft生存社群服务器**%(#DC143C)[RIA:Zth]**第216号居[**%(#e6c81f)[「:bootstrap-link-45deg:星野」]**](https://wiki.ria.red/wiki/%E6%98%9F%E9%87%8E)的主要建设者之一！
 
 (鞠躬)
 
