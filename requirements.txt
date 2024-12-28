@@ -18,6 +18,7 @@ jieba==0.42.1
 Jinja2==3.1.4
 Markdown==3.7
 markdown-it-py==3.0.0
+MarkdownEx @ file://./docs/MarkdownEx
 MarkupSafe==2.1.5
 mdurl==0.1.2
 mergedeep==1.3.4
@@ -31,7 +32,6 @@ mkdocs-material==9.5.47
 mkdocs-material-extensions==1.3.1
 mkdocs-meta-manager==1.0.0
 natsort==8.4.0
-neoteroi-mkdocs==1.1.0
 packaging==24.2
 paginate==0.5.7
 pathspec==0.12.1
